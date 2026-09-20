@@ -1,0 +1,937 @@
+{
+  "run": {
+    "evaluation_date": "2026-09-20T16:35:10.878146+07:00",
+    "framework": "custom Gemini rubric judge aligned with RAGAS definitions",
+    "evaluator_model": "gemini-3.5-flash-lite",
+    "generator_model": "gemini-3.1-flash-lite",
+    "embedding_model": "keepitreal/vietnamese-sbert",
+    "corpus_commit": "6a2a2d4771d0f104a629a4e45188bcf7b23d5dee",
+    "golden_dataset_size": 15,
+    "top_k": 5,
+    "candidate_k_for_rrf": 10,
+    "rrf_k": 60,
+    "fallback_threshold": 0.45
+  },
+  "results": [
+    {
+      "case_index": 1,
+      "config": "A",
+      "question": "Suất học bổng UEH toàn phần và bán phần có giá trị như thế nào?",
+      "answer": "Suất học bổng UEH có giá trị như sau:\n\n- Suất học bổng Toàn phần: có giá trị bằng 100% mức học phí trung bình của 15 tín chỉ (được tính tương đương với 1 học kỳ) của khóa/chương trình đào tạo xét học bổng tương ứng [S1].\n- Suất học bổng Bán phần: có giá trị bằng 50% mức học phí trung bình của 15 tín chỉ (được tính tương đương với 1 học kỳ) của khóa/chương trình đào tạo xét học bổng tương ứng [S1].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-12",
+        "legal/QD2976_HocBong (1).md::chunk-11",
+        "legal/QD2976_HocBong (1).md::chunk-16",
+        "legal/QD2976_HocBong (1).md::chunk-10",
+        "legal/QD2976_HocBong (1).md::chunk-50"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 15.39987,
+      "generation_seconds": 1.537778,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác, dựa hoàn toàn vào context được truy xuất (chunk 12 chứa đầy đủ thông tin về giá trị suất học bổng toàn phần và bán phần). Các chunk retrieved tập trung tốt vào câu hỏi."
+      }
+    },
+    {
+      "case_index": 1,
+      "config": "B",
+      "question": "Suất học bổng UEH toàn phần và bán phần có giá trị như thế nào?",
+      "answer": "Giá trị của các suất học bổng UEH được quy định như sau:\n\n- **Suất học bổng Toàn phần:** Có giá trị bằng 100% mức học phí trung bình của 15 tín chỉ (được tính tương đương với 1 học kỳ) của khóa/chương trình đào tạo xét học bổng tương ứng [S1], [S5].\n- **Suất học bổng Bán phần:** Có giá trị bằng 50% mức học phí trung bình của 15 tín chỉ (được tính tương đương với 1 học kỳ) của khóa/chương trình đào tạo xét học bổng tương ứng [S1].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-12",
+        "legal/QD2976_HocBong (1).md::chunk-11",
+        "legal/QD2976_HocBong (1).md::chunk-47",
+        "legal/QD2976_HocBong (1).md::chunk-16",
+        "news/article_02.md::chunk-49"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Học bổng Hỗ trợ học tập"
+      ],
+      "retrieval_seconds": 0.422652,
+      "generation_seconds": 3.350554,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer is accurate, fully addresses the question, and is supported by retrieved contexts. Contexts contain all necessary information with minor noise in some chunks."
+      }
+    },
+    {
+      "case_index": 2,
+      "config": "A",
+      "question": "Sinh viên ĐHCQ cần đăng ký tối thiểu bao nhiêu tín chỉ để được xét học bổng khuyến khích học tập?",
+      "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-43",
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "news/article_01.md::chunk-58",
+        "legal/QD2976_HocBong (1).md::chunk-37",
+        "legal/QD2976_HocBong (1).md::chunk-34"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Học bổng Khuyến khích học tập",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.121547,
+      "generation_seconds": 1.296656,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.0,
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieval không trả về chunk chứa thông tin về số tín chỉ tối thiểu (thiếu thông tin trong context). Do đó model từ chối trả lời. Lỗi do khâu retrieval."
+      }
+    },
+    {
+      "case_index": 2,
+      "config": "B",
+      "question": "Sinh viên ĐHCQ cần đăng ký tối thiểu bao nhiêu tín chỉ để được xét học bổng khuyến khích học tập?",
+      "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-34",
+        "legal/QD2976_HocBong (1).md::chunk-24",
+        "legal/QD2976_HocBong (1).md::chunk-22",
+        "legal/QD2976_HocBong (1).md::chunk-41",
+        "legal/QD2976_HocBong (1).md::chunk-43"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.113305,
+      "generation_seconds": 4.222053,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.0,
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved contexts không chứa thông tin về số tín chỉ tối thiểu cho sinh viên ĐHCQ xét học bổng khuyến khích học tập (context thiếu evidence). Do đó mô hình từ chối trả lời, dẫn đến answer relevance thấp nhưng faithfulness hợp lệ với ngữ cảnh được cung cấp."
+      }
+    },
+    {
+      "case_index": 3,
+      "config": "A",
+      "question": "Học bổng khuyến khích học tập loại Xuất sắc, Giỏi và Khá có mức bao nhiêu?",
+      "answer": "Các mức học bổng Khuyến khích học tập UEH được quy định như sau:\n\n- Mức học bổng loại Xuất sắc: bằng 150% mức học bổng toàn phần [S1].\n- Mức học bổng loại Giỏi: bằng 120% mức học bổng toàn phần [S1].\n- Mức học bổng loại Khá: bằng mức học bổng toàn phần [S1].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-23",
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "legal/QD2976_HocBong (1).md::chunk-7",
+        "legal/QD2976_HocBong (1).md::chunk-27",
+        "legal/QD2976_HocBong (1).md::chunk-32"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.095311,
+      "generation_seconds": 2.948486,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Context chứa đầy đủ thông tin về các mức học bổng Xuất sắc, Giỏi và Khá. Câu trả lời chính xác, hoàn toàn dựa trên context và giải quyết trọn vẹn câu hỏi."
+      }
+    },
+    {
+      "case_index": 3,
+      "config": "B",
+      "question": "Học bổng khuyến khích học tập loại Xuất sắc, Giỏi và Khá có mức bao nhiêu?",
+      "answer": "Các mức học bổng Khuyến khích học tập UEH được quy định như sau:\n\n- Mức học bổng loại Xuất sắc: bằng 150% mức học bổng toàn phần [S1].\n- Mức học bổng loại Giỏi: bằng 120% mức học bổng toàn phần [S1].\n- Mức học bổng loại Khá: bằng mức học bổng toàn phần [S1].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-23",
+        "legal/QD2976_HocBong (1).md::chunk-7",
+        "legal/QD2976_HocBong (1).md::chunk-24",
+        "legal/QD2976_HocBong (1).md::chunk-9",
+        "legal/QD2976_HocBong (1).md::chunk-25"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.138851,
+      "generation_seconds": 1.978354,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Các mức học bổng Xuất sắc, Giỏi, Khá đều được retrieved chính xác ở chunk-23 và trả lời đầy đủ, chính xác, trung thành tuyệt đối với ngữ cảnh."
+      }
+    },
+    {
+      "case_index": 4,
+      "config": "A",
+      "question": "Nếu hai sinh viên bằng điểm học tập khi xét học bổng khuyến khích thì ưu tiên ai?",
+      "answer": "Nếu sinh viên có cùng kết quả học tập, sinh viên nào có điểm rèn luyện cao hơn sẽ được ưu tiên [S3]. Trường hợp trùng cả điểm học tập và điểm rèn luyện, sinh viên đang theo học chương trình Song ngành/song chuyên ngành tại UEH sẽ được ưu tiên cấp học bổng [S3].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-33",
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "legal/QD2976_HocBong (1).md::chunk-26",
+        "legal/QD2976_HocBong (1).md::chunk-28",
+        "legal/QD2976_HocBong (1).md::chunk-8"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.087809,
+      "generation_seconds": 1.15699,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Context chứa đầy đủ thông tin (chunk 3). Câu trả lời chính xác, bám sát context và giải quyết trọn vẹn câu hỏi."
+      }
+    },
+    {
+      "case_index": 4,
+      "config": "B",
+      "question": "Nếu hai sinh viên bằng điểm học tập khi xét học bổng khuyến khích thì ưu tiên ai?",
+      "answer": "Nếu hai sinh viên có cùng kết quả học tập khi xét học bổng khuyến khích, thứ tự ưu tiên được xác định như sau:\n\n1. Sinh viên có điểm rèn luyện cao hơn sẽ được ưu tiên [S2].\n2. Trường hợp trùng cả điểm học tập và điểm rèn luyện, sinh viên đang theo học chương trình Song ngành/song chuyên ngành tại UEH sẽ được ưu tiên cấp học bổng [S2], [S5].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-33",
+        "legal/QD2976_HocBong (1).md::chunk-26",
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "legal/QD2976_HocBong (1).md::chunk-8",
+        "news/article_01.md::chunk-58"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Học bổng Khuyến khích học tập"
+      ],
+      "retrieval_seconds": 0.095134,
+      "generation_seconds": 2.162802,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn chính xác dựa trên retrieved context (chunk-26). Context chứa đầy đủ thông tin để trả lời câu hỏi."
+      }
+    },
+    {
+      "case_index": 5,
+      "config": "A",
+      "question": "Sinh viên trình độ đại học cần đáp ứng những điều kiện chính nào để tham gia học bổng Hỗ trợ học tập UEH?",
+      "answer": "Sinh viên trình độ đại học cần đáp ứng các điều kiện sau để tham gia học bổng Hỗ trợ học tập UEH:\n\n- Là sinh viên ĐHCQ (không bao gồm chương trình Cử nhân tài năng ISB BBus, Cử nhân Asean Co-op, Chất lượng cao, Tiên tiến quốc tế), sinh viên LTCQ hoặc sinh viên VLVH [S2].\n- Thuộc diện hộ nghèo, hộ cận nghèo hoặc có hoàn cảnh gia đình khó khăn [S2].\n- Nộp đơn đề nghị xét học bổng Hỗ trợ học tập UEH [S5].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-53",
+        "legal/QD2976_HocBong (1).md::chunk-39",
+        "legal/QD2976_HocBong (1).md::chunk-34",
+        "legal/QD2976_HocBong (1).md::chunk-52",
+        "legal/QD2976_HocBong (1).md::chunk-43"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.074049,
+      "generation_seconds": 2.553051,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.6,
+        "context_recall": 0.4,
+        "context_precision": 0.6,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved context chỉ chứa một phần điều kiện (thiếu các chunk tiếp theo về học lực, rèn luyện, kỷ luật), dẫn đến câu trả lời bị thiếu sót dù các ý có trong context đều chính xác."
+      }
+    },
+    {
+      "case_index": 5,
+      "config": "B",
+      "question": "Sinh viên trình độ đại học cần đáp ứng những điều kiện chính nào để tham gia học bổng Hỗ trợ học tập UEH?",
+      "answer": "Sinh viên trình độ đại học tham gia học bổng Hỗ trợ học tập UEH cần thỏa mãn các điều kiện sau:\n\n- Là sinh viên ĐHCQ (không bao gồm chương trình Cử nhân tài năng ISB BBus, Cử nhân Asean Co-op, Chất lượng cao, Tiên tiến quốc tế), sinh viên LTCQ hoặc sinh viên VLVH [S1].\n- Thuộc diện hộ nghèo, hộ cận nghèo hoặc có hoàn cảnh gia đình khó khăn [S1].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-39",
+        "legal/QD2976_HocBong (1).md::chunk-34",
+        "legal/QD2976_HocBong (1).md::chunk-46",
+        "legal/QD2976_HocBong (1).md::chunk-51",
+        "legal/QD2976_HocBong (1).md::chunk-53"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.116547,
+      "generation_seconds": 1.434981,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.4,
+        "context_recall": 0.3,
+        "context_precision": 0.6,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved context chỉ chứa một phần điều kiện (chunk-39 dừng lại ở hoàn cảnh khó khăn, thiếu các điều kiện về học tập, rèn luyện ở các chunk tiếp theo). Do thiếu context, câu trả lời bị thiếu thông tin."
+      }
+    },
+    {
+      "case_index": 6,
+      "config": "A",
+      "question": "Điểm rèn luyện yêu cầu cho học bổng Hỗ trợ học tập toàn phần và bán phần khác nhau thế nào đối với sinh viên ĐHCQ?",
+      "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "legal/QD2976_HocBong (1).md::chunk-15",
+        "legal/QD2976_HocBong (1).md::chunk-43",
+        "legal/QD2976_HocBong (1).md::chunk-9",
+        "legal/QD2976_HocBong (1).md::chunk-27"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.089004,
+      "generation_seconds": 1.184502,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.0,
+        "context_recall": 0.0,
+        "context_precision": 0.2,
+        "failure_stage": "retrieval",
+        "rationale": "Các retrieved contexts không chứa thông tin về tiêu chí điểm rèn luyện phân biệt giữa học bổng toàn phần và bán phần, dẫn đến việc mô hình không tìm thấy dữ liệu để trả lời."
+      }
+    },
+    {
+      "case_index": 6,
+      "config": "B",
+      "question": "Điểm rèn luyện yêu cầu cho học bổng Hỗ trợ học tập toàn phần và bán phần khác nhau thế nào đối với sinh viên ĐHCQ?",
+      "answer": "Đối với sinh viên ĐHCQ có hoàn cảnh khó khăn, yêu cầu về kết quả rèn luyện để được xét học bổng như sau:\n\n- Đối với học bổng toàn phần: Sinh viên phải có kết quả rèn luyện đạt từ loại Tốt trở lên [S3].\n- Đối với học bổng bán phần: Tôi không thể xác minh thông tin này từ nguồn hiện có [S3].",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-15",
+        "legal/QD2976_HocBong (1).md::chunk-25",
+        "legal/QD2976_HocBong (1).md::chunk-42",
+        "news/article_01.md::chunk-48",
+        "legal/QD2976_HocBong (1).md::chunk-40"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Học bổng Khuyến khích học tập",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.112697,
+      "generation_seconds": 1.587032,
+      "scores": {
+        "faithfulness": 0.5,
+        "answer_relevance": 0.3,
+        "context_recall": 0.5,
+        "context_precision": 0.4,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved context bị thiếu thông tin về điểm rèn luyện cho học bổng bán phần (chunk 42 bị cắt ngang). Do thiếu context, mô hình tạo câu trả lời không xác minh được phần bán phần, dẫn đến điểm relevance và recall thấp."
+      }
+    },
+    {
+      "case_index": 7,
+      "config": "A",
+      "question": "Theo quy định UEH, sinh viên ngoại trú là ai?",
+      "answer": "Theo quy định của UEH, sinh viên ngoại trú là sinh viên không ở trong khu nội trú (ký túc xá) của UEH [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-7",
+        "legal/2207_QD_NgoaiTru.md::chunk-17",
+        "legal/2207_QD_NgoaiTru.md::chunk-10",
+        "legal/2207_QD_NgoaiTru.md::chunk-16"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.069116,
+      "generation_seconds": 1.457259,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn chính xác dựa trên retrieved context (chunk 8 định nghĩa rõ sinh viên ngoại trú). Context chứa đủ bằng chứng, độ chính xác cao dù có một vài chunk phụ nhưng vẫn tập trung tốt."
+      }
+    },
+    {
+      "case_index": 7,
+      "config": "B",
+      "question": "Theo quy định UEH, sinh viên ngoại trú là ai?",
+      "answer": "Theo quy định của UEH, sinh viên ngoại trú là sinh viên không ở trong khu nội trú (ký túc xá) của UEH [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-7",
+        "legal/2207_QD_NgoaiTru.md::chunk-17",
+        "legal/2207_QD_NgoaiTru.md::chunk-11",
+        "legal/2207_QD_NgoaiTru.md::chunk-10"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.106964,
+      "generation_seconds": 1.166929,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác, dựa hoàn toàn vào context được truy xuất (chunk-8). Context chứa đầy đủ thông tin, độ chính xác cao dù có một số chunk phụ nhưng không ảnh hưởng."
+      }
+    },
+    {
+      "case_index": 8,
+      "config": "A",
+      "question": "Sinh viên ngoại trú phải khai báo địa chỉ trong bao lâu kể từ ngày nhập học?",
+      "answer": "Sinh viên phải khai báo địa chỉ ngoại trú trong thời hạn 30 ngày kể từ ngày nhập học [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-16",
+        "legal/2207_QD_NgoaiTru.md::chunk-17",
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-15",
+        "legal/2207_QD_NgoaiTru.md::chunk-23"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.073978,
+      "generation_seconds": 1.311078,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Retrieved context contains the exact required information in chunk 1. Answer is accurate, directly answers the question, and is fully supported by the context."
+      }
+    },
+    {
+      "case_index": 8,
+      "config": "B",
+      "question": "Sinh viên ngoại trú phải khai báo địa chỉ trong bao lâu kể từ ngày nhập học?",
+      "answer": "Sinh viên phải khai báo địa chỉ ngoại trú trong thời hạn 30 ngày kể từ ngày nhập học [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-16",
+        "legal/2207_QD_NgoaiTru.md::chunk-17",
+        "legal/2207_QD_NgoaiTru.md::chunk-15",
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-23"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.23039,
+      "generation_seconds": 3.804044,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer chính xác, được hỗ trợ hoàn toàn bởi retrieved context. Chunk 1 chứa thông tin trực tiếp, các chunk khác có liên quan hoặc làm ngữ cảnh bổ sung."
+      }
+    },
+    {
+      "case_index": 9,
+      "config": "A",
+      "question": "Sinh viên có thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú bằng cách nào?",
+      "answer": "Sinh viên có địa chỉ thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú bằng hình thức trực tuyến qua Cổng dịch vụ công quản lý cư trú hoặc trực tiếp tại cơ quan công an xã (phường, thị trấn) nơi đang tạm trú tại Thành phố Hồ Chí Minh [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-15",
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-18",
+        "legal/2207_QD_NgoaiTru.md::chunk-4",
+        "legal/2207_QD_NgoaiTru.md::chunk-16"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.102907,
+      "generation_seconds": 1.72593,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn chính xác dựa trên retrieved context (chunk 15). Context chứa đầy đủ bằng chứng, chunk 15 rất tập trung mặc dù các chunk khác ít liên quan hơn nhưng không ảnh hưởng lớn."
+      }
+    },
+    {
+      "case_index": 9,
+      "config": "B",
+      "question": "Sinh viên có thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú bằng cách nào?",
+      "answer": "Sinh viên có địa chỉ thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú với công an xã (phường, thị trấn) nơi đang tạm trú tại Thành phố Hồ Chí Minh bằng hình thức trực tuyến qua Cổng dịch vụ công quản lý cư trú hoặc trực tiếp tại cơ quan công an [S1].",
+      "source_ids": [
+        "legal/2207_QD_NgoaiTru.md::chunk-15",
+        "legal/2207_QD_NgoaiTru.md::chunk-4",
+        "legal/2207_QD_NgoaiTru.md::chunk-8",
+        "legal/2207_QD_NgoaiTru.md::chunk-7",
+        "legal/2207_QD_NgoaiTru.md::chunk-17"
+      ],
+      "source_titles": [
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru",
+        "2207_QD_NgoaiTru"
+      ],
+      "retrieval_seconds": 0.106626,
+      "generation_seconds": 1.365468,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Context chứa đầy đủ thông tin, câu trả lời chính xác, trực tiếp và hoàn toàn dựa trên retrieved context."
+      }
+    },
+    {
+      "case_index": 10,
+      "config": "A",
+      "question": "Học phần Thực tập và tốt nghiệp có bao nhiêu tín chỉ và gồm những hình thức nào?",
+      "answer": "Học phần “Thực tập và tốt nghiệp” có 10 tín chỉ [S2]. Học phần này bao gồm 02 hình thức là “Thực tập tốt nghiệp” và “Học kỳ thực tế” [S2], [S3].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-17",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-12",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-37",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-28"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.088831,
+      "generation_seconds": 1.154602,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Các chunk retrieved (đặc biệt chunk 12 và 13) cung cấp đầy đủ thông tin về số tín chỉ (10) và các hình thức của học phần (Thực tập tốt nghiệp và Học kỳ thực tế). Câu trả lời chính xác và được hỗ trợ hoàn toàn bởi ngữ cảnh."
+      }
+    },
+    {
+      "case_index": 10,
+      "config": "B",
+      "question": "Học phần Thực tập và tốt nghiệp có bao nhiêu tín chỉ và gồm những hình thức nào?",
+      "answer": "Học phần “Thực tập và tốt nghiệp” quy định 10 (mười) tín chỉ [S1]. Học phần này bao gồm 02 (hai) hình thức là “Thực tập tốt nghiệp” và “Học kỳ thực tế” [S3].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-12",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-17",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-28",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-8"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.109291,
+      "generation_seconds": 1.259012,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời chính xác, đầy đủ dựa hoàn toàn vào các đoạn retrieved context (chunk 12 và 13). Context chứa một số chunk không liên quan trực tiếp (như chunk 8, 17, 28) nhưng không ảnh hưởng đến chất lượng câu trả lời."
+      }
+    },
+    {
+      "case_index": 11,
+      "config": "A",
+      "question": "Điều kiện tín chỉ để đăng ký học phần Thực tập và tốt nghiệp là gì?",
+      "answer": "Tại thời điểm đăng ký học phần “Thực tập và tốt nghiệp”, sinh viên phải tích lũy được 70% số tín chỉ trong chương trình đào tạo (không tính số tín chỉ của học phần Thực tập và tốt nghiệp, Giáo dục thể chất, Giáo dục quốc phòng) [S1].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-17",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-44",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-16",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-51"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.077661,
+      "generation_seconds": 1.142715,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn dựa trên retrieved context (chunk 1), trả lời đúng và đủ trọng tâm câu hỏi. Context chứa đủ thông tin (chunk 1 tập trung chính xác vào điều kiện đăng ký, các chunk khác ít liên quan hơn nhưng không gây ảnh hưởng lớn)."
+      }
+    },
+    {
+      "case_index": 11,
+      "config": "B",
+      "question": "Điều kiện tín chỉ để đăng ký học phần Thực tập và tốt nghiệp là gì?",
+      "answer": "Tại thời điểm đăng ký học phần “Thực tập và tốt nghiệp”, sinh viên phải tích lũy được 70% số tín chỉ trong chương trình đào tạo (không tính số tín chỉ của học phần Thực tập và tốt nghiệp, Giáo dục thể chất, Giáo dục quốc phòng) [S1].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-17",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-44",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-16",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-18"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.107372,
+      "generation_seconds": 1.119122,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác, dựa vào retrieved context (chunk 17) và giải quyết trực tiếp câu hỏi. Retrieved contexts chứa đầy đủ thông tin (context_recall = 1.0) và chunk 17 tập trung chính xác vào điều kiện đăng ký, dù có một số chunk phụ nhưng không ảnh hưởng lớn."
+      }
+    },
+    {
+      "case_index": 12,
+      "config": "A",
+      "question": "Sinh viên có thể đăng ký học phần Thực tập và tốt nghiệp sớm hơn kế hoạch không?",
+      "answer": "Sinh viên có thể đăng ký học phần “Thực tập và tốt nghiệp” sớm hơn 01 (một) học kỳ nếu đáp ứng đủ điều kiện về số tín chỉ tích lũy và học phần tiên quyết của học phần này [S1].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-36",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-20",
+        "news/article_03.md::chunk-32",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-38"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "Đăng ký học phần",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.064203,
+      "generation_seconds": 1.427618,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác, dựa hoàn toàn vào context được trích xuất ở chunk-13. Các thông tin về điều kiện tín chỉ, học phần tiên quyết và thời gian sớm hơn 01 học kỳ đều khớp với expected answer và context."
+      }
+    },
+    {
+      "case_index": 12,
+      "config": "B",
+      "question": "Sinh viên có thể đăng ký học phần Thực tập và tốt nghiệp sớm hơn kế hoạch không?",
+      "answer": "Sinh viên có thể đăng ký học phần “Thực tập và tốt nghiệp” sớm hơn 01 (một) học kỳ so với kế hoạch của chương trình đào tạo nếu đáp ứng đủ điều kiện về số tín chỉ tích lũy và học phần tiên quyết [S1].",
+      "source_ids": [
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-13",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-20",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-18",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-17",
+        "legal/UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052.md::chunk-38"
+      ],
+      "source_titles": [
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052",
+        "UEH-QD-4295-DHKT-DT-B-hanh-qdinh-HPThuc-tap-va-_241025_091052"
+      ],
+      "retrieval_seconds": 0.108752,
+      "generation_seconds": 1.829251,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn chính xác, dựa vào context chunk 13 nói về việc đăng ký sớm hơn 01 học kỳ nếu đủ điều kiện. Retrieved contexts chứa đầy đủ thông tin cần thiết."
+      }
+    },
+    {
+      "case_index": 13,
+      "config": "A",
+      "question": "UEH hỗ trợ những hình thức đóng học phí nào?",
+      "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+      "source_ids": [
+        "legal/QD2976_HocBong (1).md::chunk-53",
+        "legal/QD2976_HocBong (1).md::chunk-51",
+        "legal/QD2976_HocBong (1).md::chunk-11",
+        "legal/QD2976_HocBong (1).md::chunk-48",
+        "news/article_05.md::chunk-38"
+      ],
+      "source_titles": [
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập"
+      ],
+      "retrieval_seconds": 0.09188,
+      "generation_seconds": 3.994151,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.0,
+        "context_recall": 0.0,
+        "context_precision": 0.0,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved contexts không chứa thông tin về hình thức đóng học phí (toàn bộ là về học bổng và chính sách hỗ trợ), dẫn đến generated answer phải từ chối trả lời."
+      }
+    },
+    {
+      "case_index": 13,
+      "config": "B",
+      "question": "UEH hỗ trợ những hình thức đóng học phí nào?",
+      "answer": "UEH hỗ trợ các hình thức đóng học phí bao gồm: đóng qua cổng payment, đóng qua hình thức chuyển khoản và đóng trực tiếp tại hệ thống ngân hàng OCB (tiền mặt) [S4]. Ngoài ra, UEH còn liên kết với các ngân hàng để sinh viên vay tín dụng học tập với lãi suất thấp [S1].",
+      "source_ids": [
+        "news/article_04.md::chunk-53",
+        "legal/QD2976_HocBong (1).md::chunk-10",
+        "legal/QD2976_HocBong (1).md::chunk-53",
+        "news/article_04.md::chunk-48",
+        "legal/QD2976_HocBong (1).md::chunk-51"
+      ],
+      "source_titles": [
+        "Đóng học phí",
+        "QD2976_HocBong (1)",
+        "QD2976_HocBong (1)",
+        "Đóng học phí",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.129543,
+      "generation_seconds": 4.187082,
+      "scores": {
+        "faithfulness": 0.8,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.4,
+        "failure_stage": "retrieval",
+        "rationale": "Retrieved contexts chứa quá nhiều chunk không liên quan về học bổng (chunk 2, 3, 5), chỉ có chunk 4 chứa thông tin về đóng học phí, chunk 1 nói về vay tín dụng. Generated answer trả lời đúng ý câu hỏi nhưng retrieval bị lẫn nhiều nhiễu."
+      }
+    },
+    {
+      "case_index": 14,
+      "config": "A",
+      "question": "Sau khi đóng học phí, sinh viên kiểm tra trường đã nhận tiền ở đâu?",
+      "answer": "Sau khi đóng học phí, sinh viên có thể kiểm tra việc thanh toán tại trang thông tin cá nhân, mục “Tài khoản sinh viên” bằng cách chọn “Năm học” và “Học kỳ” tương ứng [S4]. Số tiền trường đã nhận sẽ hiển thị tại cột “Số tiền trả” và “Tổng trả” [S4]. Ngoài ra, sinh viên cũng có thể liên hệ Ban Tài chính - Kế hoạch đầu tư qua số điện thoại (028) 7306 1976 (ext. 9001) để kiểm tra [S1].",
+      "source_ids": [
+        "news/article_04.md::chunk-55",
+        "news/article_04.md::chunk-48",
+        "legal/QD2976_HocBong (1).md::chunk-35",
+        "news/article_04.md::chunk-52",
+        "legal/QD2976_HocBong (1).md::chunk-10"
+      ],
+      "source_titles": [
+        "Đóng học phí",
+        "Đóng học phí",
+        "QD2976_HocBong (1)",
+        "Đóng học phí",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.06156,
+      "generation_seconds": 2.025317,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.6,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác dựa trên retrieved context (chunk 52 và chunk 55). Context có chứa một số chunk nhiễu (học bổng), nhưng vẫn có đủ bằng chứng để trả lời."
+      }
+    },
+    {
+      "case_index": 14,
+      "config": "B",
+      "question": "Sau khi đóng học phí, sinh viên kiểm tra trường đã nhận tiền ở đâu?",
+      "answer": "Sau khi đóng học phí, sinh viên có thể kiểm tra việc trường đã nhận tiền qua các cách sau:\n\n*   Kiểm tra tại tài khoản sinh viên trên trang [https://student.ueh.edu.vn/](https://student.ueh.edu.vn/), mục \"Thông tin học phí đã nộp\" hoặc xem thời khóa biểu đã được cập nhật [S4].\n*   Tại trang thông tin cá nhân, sinh viên vào mục “Tài khoản sinh viên”, chọn “Năm học” và “Học kỳ” tương ứng để xem số tiền tại cột “Số tiền trả” và “Tổng trả” [S2].\n*   Liên hệ Ban Tài chính - Kế hoạch đầu tư qua số điện thoại (028) 7306 1976 (ext. 9001) để kiểm tra [S1].",
+      "source_ids": [
+        "news/article_04.md::chunk-55",
+        "news/article_04.md::chunk-52",
+        "news/article_04.md::chunk-48",
+        "news/article_04.md::chunk-49",
+        "news/article_04.md::chunk-51"
+      ],
+      "source_titles": [
+        "Đóng học phí",
+        "Đóng học phí",
+        "Đóng học phí",
+        "Đóng học phí",
+        "Đóng học phí"
+      ],
+      "retrieval_seconds": 0.143413,
+      "generation_seconds": 2.718954,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Câu trả lời hoàn toàn chính xác, dựa vào các ngữ cảnh đã truy xuất (cả chunk 52, 49 và 55 đều được tổng hợp đúng). Context có chứa đủ thông tin và các chunk khá tập trung."
+      }
+    },
+    {
+      "case_index": 15,
+      "config": "A",
+      "question": "Sinh viên nộp hồ sơ miễn giảm học phí và hỗ trợ chi phí học tập ở đâu?",
+      "answer": "Sinh viên nộp Giấy đề nghị xét miễn giảm học phí và hỗ trợ chi phí học tập trực tiếp tại Phòng Đào tạo theo Thông báo của UEH Mekong về việc nộp hồ sơ [S1].",
+      "source_ids": [
+        "news/article_05.md::chunk-34",
+        "news/article_05.md::chunk-28",
+        "news/article_05.md::chunk-33",
+        "news/article_04.md::chunk-54",
+        "legal/QD2976_HocBong (1).md::chunk-62"
+      ],
+      "source_titles": [
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Đóng học phí",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.059616,
+      "generation_seconds": 1.323077,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.6,
+        "failure_stage": "none",
+        "rationale": "Context chứa đầy đủ thông tin để trả lời câu hỏi và câu trả lời hoàn toàn chính xác dựa trên retrieved context (chunk-34). Mặc dù có các chunk nhiễu từ 2 đến 5, nhưng chunk-1 đã cung cấp đủ evidence nên hệ thống vẫn đạt kết quả tốt ở các metric chính."
+      }
+    },
+    {
+      "case_index": 15,
+      "config": "B",
+      "question": "Sinh viên nộp hồ sơ miễn giảm học phí và hỗ trợ chi phí học tập ở đâu?",
+      "answer": "Sinh viên nộp Giấy đề nghị xét miễn giảm học phí và Hỗ trợ chi phí học tập trực tiếp tại Phòng Đào tạo theo Thông báo của UEH Mekong về việc nộp hồ sơ [S1].",
+      "source_ids": [
+        "news/article_05.md::chunk-34",
+        "news/article_05.md::chunk-28",
+        "news/article_05.md::chunk-33",
+        "news/article_05.md::chunk-35",
+        "legal/QD2976_HocBong (1).md::chunk-62"
+      ],
+      "source_titles": [
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "Chính sách Miễn giảm học phí, Hỗ trợ chi phí học tập",
+        "QD2976_HocBong (1)"
+      ],
+      "retrieval_seconds": 0.101963,
+      "generation_seconds": 1.411561,
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_recall": 1.0,
+        "context_precision": 0.8,
+        "failure_stage": "none",
+        "rationale": "Generated answer hoàn toàn chính xác và dựa trên context được retrieve. Context chứa đủ thông tin trả lời câu hỏi, chunk 1 tập trung đúng địa điểm nộp hồ sơ."
+      }
+    }
+  ],
+  "summary": {
+    "A": {
+      "faithfulness": 1.0,
+      "answer_relevance": 0.7733333333333333,
+      "context_recall": 0.76,
+      "context_precision": 0.6133333333333334,
+      "average": 0.7866666666666666,
+      "mean_retrieval_seconds": 1.1038227999999999,
+      "mean_generation_seconds": 1.7492806666666667
+    },
+    "B": {
+      "faithfulness": 0.9533333333333334,
+      "answer_relevance": 0.8466666666666666,
+      "context_recall": 0.8533333333333334,
+      "context_precision": 0.68,
+      "average": 0.8333333333333334,
+      "mean_retrieval_seconds": 0.1429,
+      "mean_generation_seconds": 2.239813266666667
+    }
+  }
+}

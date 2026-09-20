@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Suất học bổng UEH toàn phần và bán phần có giá trị như thế nào?",
+    "expected_answer": "Suất toàn phần bằng 100% mức học phí trung bình của 15 tín chỉ; suất bán phần bằng 50% mức học phí trung bình của 15 tín chỉ của khóa hoặc chương trình tương ứng.",
+    "expected_context": "Suất học bổng Toàn phần: là suất học bổng có giá trị bằng 100% mức học phí trung bình của 15 tín chỉ; Suất học bổng Bán phần: là suất học bổng có giá trị bằng 50% mức học phí trung bình của 15 tín chỉ."
+  },
+  {
+    "question": "Sinh viên ĐHCQ cần đăng ký tối thiểu bao nhiêu tín chỉ để được xét học bổng khuyến khích học tập?",
+    "expected_answer": "Sinh viên ĐHCQ phải đăng ký ít nhất 15 tín chỉ trong học kỳ, trừ trường hợp đặc biệt được UEH xem xét.",
+    "expected_context": "Số tín chỉ sinh viên đăng ký trong học kỳ phải lớn hơn hoặc bằng 15 tín chỉ. Các trường hợp đặc biệt, UEH sẽ xem xét cụ thể và thông báo cho sinh viên."
+  },
+  {
+    "question": "Học bổng khuyến khích học tập loại Xuất sắc, Giỏi và Khá có mức bao nhiêu?",
+    "expected_answer": "Loại Xuất sắc bằng 150% mức học bổng toàn phần, loại Giỏi bằng 120%, và loại Khá bằng một suất học bổng toàn phần.",
+    "expected_context": "Mức bổng loại Xuất sắc: bằng 150% mức học bổng toàn phần; Mức học bổng loại Giỏi: bằng 120% mức học bổng toàn phần; Mức học bổng loại Khá: bằng mức học bổng toàn phần."
+  },
+  {
+    "question": "Nếu hai sinh viên bằng điểm học tập khi xét học bổng khuyến khích thì ưu tiên ai?",
+    "expected_answer": "Sinh viên có điểm rèn luyện cao hơn được ưu tiên; nếu tiếp tục trùng cả hai điểm thì ưu tiên sinh viên học song ngành hoặc song chuyên ngành tại UEH.",
+    "expected_context": "Nếu sinh viên có cùng kết quả học tập thì sinh viên nào có điểm rèn luyện cao hơn sẽ được ưu tiên. Trường hợp trùng điểm học tập và rèn luyện, sinh viên đang theo học chương trình Song ngành/song chuyên ngành tại UEH sẽ được ưu tiên."
+  },
+  {
+    "question": "Sinh viên trình độ đại học cần đáp ứng những điều kiện chính nào để tham gia học bổng Hỗ trợ học tập UEH?",
+    "expected_answer": "Sinh viên phải thuộc diện khó khăn, đạt học tập từ Khá, đáp ứng yêu cầu rèn luyện áp dụng cho ĐHCQ, mọi học phần tính xét đạt từ 5 điểm, không bị kỷ luật từ khiển trách, chưa nhận học bổng tương đương một suất toàn phần; LTCQ và VLVH còn phải đăng ký ít nhất 15 tín chỉ.",
+    "expected_context": "Thuộc diện hộ nghèo, hộ cận nghèo hoặc có hoàn cảnh gia đình khó khăn; Có kết quả học tập đạt từ Khá trở lên; Có kết quả rèn luyện từ loại Khá trở lên; Đạt 5 điểm trở lên đối với tất cả học phần; Không bị kỷ luật từ mức khiển trách; Chưa nhận bất kỳ học bổng nào tương đương với 01 suất học bổng toàn phần."
+  },
+  {
+    "question": "Điểm rèn luyện yêu cầu cho học bổng Hỗ trợ học tập toàn phần và bán phần khác nhau thế nào đối với sinh viên ĐHCQ?",
+    "expected_answer": "Học bổng toàn phần yêu cầu kết quả rèn luyện từ loại Tốt; học bổng bán phần yêu cầu từ loại Khá.",
+    "expected_context": "Học bổng toàn phần: sinh viên ĐHCQ phải có kết quả rèn luyện đạt từ loại Tốt trở lên. Học bổng bán phần: sinh viên ĐHCQ phải có kết quả rèn luyện đạt từ loại Khá trở lên."
+  },
+  {
+    "question": "Theo quy định UEH, sinh viên ngoại trú là ai?",
+    "expected_answer": "Là sinh viên không ở trong khu nội trú hoặc ký túc xá của UEH.",
+    "expected_context": "Sinh viên ngoại trú là sinh viên không ở trong khu nội trú (ký túc xá) của UEH."
+  },
+  {
+    "question": "Sinh viên ngoại trú phải khai báo địa chỉ trong bao lâu kể từ ngày nhập học?",
+    "expected_answer": "Trong thời hạn 30 ngày kể từ ngày nhập học.",
+    "expected_context": "Sinh viên khai báo địa chỉ ngoại trú trong thời hạn 30 ngày kể từ ngày nhập học."
+  },
+  {
+    "question": "Sinh viên có thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú bằng cách nào?",
+    "expected_answer": "Phải đăng ký với công an xã, phường hoặc thị trấn nơi tạm trú tại TP.HCM, trực tuyến qua Cổng dịch vụ công quản lý cư trú hoặc trực tiếp tại cơ quan công an.",
+    "expected_context": "Sinh viên có địa chỉ thường trú ngoài Thành phố Hồ Chí Minh phải đăng ký tạm trú với công an xã (phường, thị trấn) nơi đang tạm trú tại Thành phố Hồ Chí Minh theo quy định bằng hình thức trực tuyến qua Cổng dịch vụ công quản lý cư trú hoặc trực tiếp tại cơ quan công an."
+  },
+  {
+    "question": "Học phần Thực tập và tốt nghiệp có bao nhiêu tín chỉ và gồm những hình thức nào?",
+    "expected_answer": "Học phần có 10 tín chỉ và gồm hai hình thức: Thực tập tốt nghiệp và Học kỳ thực tế; sinh viên chọn một trong hai.",
+    "expected_context": "Học phần Thực tập và tốt nghiệp quy định 10 tín chỉ. Hình thức bao gồm Thực tập tốt nghiệp và Học kỳ thực tế. Sinh viên được lựa chọn 01 trong 02 hình thức."
+  },
+  {
+    "question": "Điều kiện tín chỉ để đăng ký học phần Thực tập và tốt nghiệp là gì?",
+    "expected_answer": "Sinh viên phải tích lũy 70% số tín chỉ của chương trình đào tạo, không tính số tín chỉ của học phần Thực tập và tốt nghiệp, và thỏa điều kiện học phần tiên quyết.",
+    "expected_context": "Tích lũy 70% số tín chỉ trong chương trình đào tạo (không tính số tín chỉ của học phần Thực tập và tốt nghiệp); Thỏa các điều kiện về học phần tiên quyết của học phần Thực tập và tốt nghiệp."
+  },
+  {
+    "question": "Sinh viên có thể đăng ký học phần Thực tập và tốt nghiệp sớm hơn kế hoạch không?",
+    "expected_answer": "Có. Nếu đủ số tín chỉ tích lũy và học phần tiên quyết, sinh viên có thể đăng ký sớm hơn một học kỳ.",
+    "expected_context": "Trường hợp đáp ứng đủ điều kiện về số tín chỉ tích lũy và học phần tiên quyết của học phần Thực tập và tốt nghiệp, sinh viên có thể đăng ký học phần sớm hơn 01 học kỳ."
+  },
+  {
+    "question": "UEH hỗ trợ những hình thức đóng học phí nào?",
+    "expected_answer": "Có thể đóng qua cổng thanh toán trực tuyến, chuyển khoản, dùng thẻ tại OCB Phạm Ngọc Thạch, hoặc nộp tiền mặt tại các chi nhánh và phòng giao dịch OCB.",
+    "expected_context": "Cách 1: nộp học phí thông qua Cổng thanh toán trực tuyến; Cách 2: nộp học phí bằng hình thức chuyển khoản; Cách 3: nộp bằng các loại thẻ ngân hàng tại OCB hoặc nộp tiền mặt trực tiếp tại các chi nhánh, phòng giao dịch OCB."
+  },
+  {
+    "question": "Sau khi đóng học phí, sinh viên kiểm tra trường đã nhận tiền ở đâu?",
+    "expected_answer": "Kiểm tra trong Tài khoản sinh viên, chọn năm học và học kỳ tương ứng; khoản đã nhận hiển thị ở cột Số tiền trả và Tổng trả.",
+    "expected_context": "Sinh viên quay lại trang thông tin cá nhân, kiểm tra việc thanh toán học phí tại mục Tài khoản sinh viên bằng cách chọn Năm học và Học kỳ tương ứng. Số tiền nhận sẽ thể hiện tại cột Số tiền trả và Tổng trả."
+  },
+  {
+    "question": "Sinh viên nộp hồ sơ miễn giảm học phí và hỗ trợ chi phí học tập ở đâu?",
+    "expected_answer": "Sinh viên nộp trực tiếp tại Phòng Đào tạo theo thông báo của UEH Mekong và phải nộp đúng hạn với giấy tờ hợp lệ.",
+    "expected_context": "Sinh viên nộp Giấy đề nghị xét miễn giảm học phí, Hỗ trợ chi phí học tập trực tiếp tại PHÒNG ĐÀO TẠO theo Thông báo của UEH Mekong. Phòng Đào tạo sẽ không nhận nếu giấy tờ không hợp lệ hoặc không nộp đúng thời gian quy định."
+  }
+]
