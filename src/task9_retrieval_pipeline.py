@@ -1,21 +1,14 @@
-"""
-Task 9 — Retrieval pipeline hoàn chỉnh.
+"""Task 9: orchestrate dense, lexical, hybrid, and fallback retrieval."""
 
-Luồng xử lý:
-    1. Chạy semantic_search và lexical_search.
-    2. Fuse hai danh sách bằng RRF đúng một lần.
-    3. Lấy best cosine score gốc từ dense results.
-    4. Nếu score dưới threshold, thử PageIndex fallback.
-    5. Nếu fallback lỗi, trả hybrid results thay vì crash.
+from __future__ import annotations
 
-Không so sánh threshold với RRF score vì hai thang đo khác nhau.
-"""
+from typing import Any
 
+from .contracts import validate_search_results
 from .task5_semantic_search import semantic_search
 from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
-
 
 SCORE_THRESHOLD = 0.3
 DEFAULT_TOP_K = 5
@@ -26,29 +19,47 @@ def retrieve(
     top_k: int = DEFAULT_TOP_K,
     score_threshold: float = SCORE_THRESHOLD,
     use_reranking: bool = True,
-) -> list[dict]:
-    """Trả về hybrid hoặc pageindex SearchResult."""
-    # TODO: Implement full retrieval pipeline.
-    #
-    # dense = semantic_search(query, top_k=top_k * 2)
-    # sparse = lexical_search(query, top_k=top_k * 2)
-    # hybrid = (
-    #     rerank_rrf([dense, sparse], top_k=top_k)
-    #     if use_reranking else dense[:top_k]
-    # )
-    #
-    # best_dense_score = dense[0]["score"] if dense else 0.0
-    # if best_dense_score < score_threshold:
-    #     try:
-    #         fallback = pageindex_search(query, top_k=top_k)
-    #         if fallback:
-    #             return fallback
-    #     except Exception:
-    #         pass
-    # return hybrid[:top_k]
-    raise NotImplementedError("Implement retrieve")
+) -> list[dict[str, Any]]:
+    """Retrieve evidence and use PageIndex only for a weak dense match.
 
+    The fallback decision deliberately uses the original dense similarity,
+    because an RRF score has a different scale and cannot be compared with a
+    dense-score threshold.
+    """
+    if not isinstance(query, str) or not query.strip():
+        raise ValueError("query must be a non-empty string")
+    if top_k <= 0:
+        return []
 
-if __name__ == "__main__":
-    for result in retrieve("test query", top_k=3):
-        print(result)
+    candidate_k = top_k * 2
+    dense_results = semantic_search(query, top_k=candidate_k)
+    sparse_results = lexical_search(query, top_k=candidate_k)
+
+    if use_reranking:
+        combined = rerank_rrf([dense_results, sparse_results], top_k=top_k)
+        expected_method = "hybrid"
+    else:
+        combined = [
+            {**item, "metadata": dict(item["metadata"])}
+            for item in dense_results[:top_k]
+        ]
+        expected_method = "dense"
+
+    best_dense_score = float(dense_results[0]["score"]) if dense_results else 0.0
+    if best_dense_score < score_threshold:
+        try:
+            fallback = pageindex_search(query, top_k=top_k)
+            if fallback:
+                fallback = fallback[:top_k]
+                validate_search_results(
+                    fallback, top_k=top_k, expected_method="pageindex"
+                )
+                return fallback
+        except Exception:
+            # PageIndex is optional. Its outage must not discard local evidence.
+            pass
+
+    validate_search_results(
+        combined, top_k=top_k, expected_method=expected_method
+    )
+    return combined

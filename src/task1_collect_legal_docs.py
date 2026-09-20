@@ -15,6 +15,8 @@ from pathlib import Path
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+SOURCE_MANIFEST = DATA_DIR.parent / "SOURCES.md"
+LEGAL_EXTENSIONS = {".pdf", ".doc", ".docx"}
 
 
 def setup_directory() -> None:
@@ -24,20 +26,31 @@ def setup_directory() -> None:
 
 
 def download_documents() -> None:
-    """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
-    # TODO: Có thể tải thủ công hoặc dùng requests.
-    #
-    # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    """Validate the legal documents that were downloaded into the landing area.
+
+    The group supplied these files manually, so this step deliberately does not
+    redownload or overwrite them. Public origin URLs are recorded in SOURCES.md.
+    """
+    documents = sorted(
+        path
+        for path in DATA_DIR.iterdir()
+        if path.is_file()
+        and not path.name.startswith(".")
+        and path.suffix.lower() in LEGAL_EXTENSIONS
+    )
+    if len(documents) < 3:
+        raise ValueError(
+            f"Expected at least 3 legal documents in {DATA_DIR}, found {len(documents)}"
+        )
+    too_small = [path.name for path in documents if path.stat().st_size <= 1024]
+    if too_small:
+        raise ValueError(f"Legal documents look empty or incomplete: {too_small}")
+    if not SOURCE_MANIFEST.is_file():
+        raise FileNotFoundError(f"Missing source manifest: {SOURCE_MANIFEST}")
+
+    for path in documents:
+        print(f"Ready: {path.name} ({path.stat().st_size:,} bytes)")
+    print(f"Sources: {SOURCE_MANIFEST}")
 
 
 if __name__ == "__main__":

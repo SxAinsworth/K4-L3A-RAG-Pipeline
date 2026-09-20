@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Theo quy chế của Trường Đại học Sư phạm TP.HCM, một tín chỉ được quy đổi thành bao nhiêu giờ học?",
+    "expected_answer": "Một tín chỉ tương đương 15 giờ lý thuyết và 30 giờ tự học có hướng dẫn; hoặc 30 giờ thực hành, thí nghiệm, thảo luận và 15 giờ tự học; hoặc 45 giờ thực tập, tiểu luận, bài tập lớn, đồ án hay khóa luận. Một giờ học được tính bằng 50 phút.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 2 khoản 1. Một tín chỉ bằng 15 giờ lý thuyết và 30 giờ tự học; hoặc 30 giờ thực hành và 15 giờ tự học; hoặc 45 giờ thực tập, tiểu luận, bài tập lớn, đồ án, khóa luận."
+  },
+  {
+    "question": "Thời gian học chuẩn và tối đa của chương trình đại học cấp bằng thứ nhất hệ chính quy tại HCMUE là bao lâu?",
+    "expected_answer": "Thời gian học chuẩn là 4 năm và thời gian học tối đa là 8 năm.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 3 khoản 6. Đào tạo đại học cấp bằng thứ nhất hệ chính quy có thời gian học tập chuẩn 4 năm và tối đa 8 năm."
+  },
+  {
+    "question": "Từ học kỳ nào sinh viên chính quy HCMUE phải tự đăng ký học phần?",
+    "expected_answer": "Từ học kỳ thứ hai của khóa học, sinh viên phải tự đăng ký học phần trên hệ thống của Trường.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 9 khoản 1 điểm b. Từ học kỳ thứ hai, sinh viên tự đăng ký học phần trên hệ thống theo kế hoạch được ban hành."
+  },
+  {
+    "question": "Giới hạn khối lượng học tập trong mỗi học kỳ chính tại HCMUE được quy định thế nào?",
+    "expected_answer": "Khối lượng tối thiểu không ít hơn 2/3 và tối đa không vượt quá 3/2 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 9 khoản 1 điểm e. Khối lượng tối thiểu là 2/3 và tối đa là 3/2 khối lượng trung bình một học kỳ theo kế hoạch chuẩn."
+  },
+  {
+    "question": "Điểm học phần tại HCMUE được tính và làm tròn như thế nào?",
+    "expected_answer": "Điểm học phần là tổng các điểm thành phần nhân với trọng số tương ứng và được làm tròn tới một chữ số thập phân.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 10 khoản 2. Điểm học phần được tính từ tổng điểm thành phần nhân trọng số và làm tròn tới một chữ số thập phân."
+  },
+  {
+    "question": "Đánh giá trực tuyến tại HCMUE được đóng góp tối đa bao nhiêu phần trăm trọng số điểm học phần?",
+    "expected_answer": "Thông thường đánh giá trực tuyến không được đóng góp quá 50% trọng số điểm học phần. Bảo vệ đồ án, khóa luận hoặc tiểu luận có thể có trọng số cao hơn nếu đáp ứng các điều kiện bổ sung của quy chế.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 10 khoản 1 điểm đ. Đánh giá trực tuyến đóng góp không quá 50% trọng số; bảo vệ trực tuyến có thể cao hơn khi có hội đồng ít nhất ba thành viên, có đồng thuận và được ghi hình, ghi âm."
+  },
+  {
+    "question": "Sinh viên HCMUE vắng thi không có lý do chính đáng bị xử lý thế nào?",
+    "expected_answer": "Sinh viên phải nhận điểm 0. Nếu vắng có lý do chính đáng, có đơn và minh chứng được chấp thuận thì được bố trí thi bổ sung và tính điểm lần đầu.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 10 khoản 1 điểm e. Vắng thi không có lý do chính đáng nhận điểm 0; trường hợp có lý do chính đáng và được phép sẽ thi bổ sung."
+  },
+  {
+    "question": "Những ngưỡng điểm nào khiến sinh viên chính quy HCMUE bị cảnh báo học tập?",
+    "expected_answer": "Sinh viên bị cảnh báo nếu tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký hoặc nợ quá 24 tín chỉ; điểm trung bình học kỳ dưới 0,8 ở học kỳ đầu hoặc dưới 1,0 ở các học kỳ sau; hoặc điểm trung bình tích lũy dưới ngưỡng 1,2, 1,4, 1,6, 1,8 tương ứng theo trình độ năm học.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 12 khoản 1. Quy chế nêu ba nhóm tiêu chí cảnh báo: số tín chỉ không đạt/nợ đọng, điểm trung bình học kỳ và điểm trung bình tích lũy theo năm học."
+  },
+  {
+    "question": "Khi nào sinh viên chính quy HCMUE có thể bị buộc thôi học do cảnh báo học tập?",
+    "expected_answer": "Sinh viên có thể bị buộc thôi học khi bị cảnh báo ba lần liên tiếp, bị cảnh báo đến lần thứ tư tính từ đầu khóa, hoặc vượt quá thời gian học tập tối đa.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 12 khoản 2. Các trường hợp gồm cảnh báo 3 lần liên tiếp, cảnh báo lần thứ 4 từ đầu khóa hoặc vượt thời gian học tối đa."
+  },
+  {
+    "question": "HCMUE cho phép công nhận và chuyển đổi tối đa bao nhiêu khối lượng học tập từ chương trình khác?",
+    "expected_answer": "Khối lượng được công nhận và chuyển đổi không vượt quá 50% khối lượng học tập tối thiểu của chương trình đào tạo; ngành đào tạo giáo viên thực hiện theo hướng dẫn riêng của Bộ Giáo dục và Đào tạo.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 14 khoản 3. Khối lượng tối đa được công nhận, chuyển đổi không vượt quá 50% khối lượng học tập tối thiểu của chương trình."
+  },
+  {
+    "question": "Các điều kiện chính để sinh viên HCMUE được công nhận tốt nghiệp là gì?",
+    "expected_answer": "Sinh viên phải tích lũy đủ học phần và tín chỉ, hoàn thành nội dung bắt buộc, đạt chuẩn đầu ra, có điểm trung bình tích lũy toàn khóa từ trung bình trở lên, đồng thời không bị truy cứu trách nhiệm hình sự hoặc kỷ luật đình chỉ tại thời điểm xét.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 15 khoản 1. Điều kiện gồm hoàn thành chương trình và chuẩn đầu ra, điểm tích lũy từ trung bình, không bị truy cứu hình sự hoặc đình chỉ học tập."
+  },
+  {
+    "question": "Hạng tốt nghiệp giỏi hoặc xuất sắc tại HCMUE bị giảm một mức trong trường hợp nào?",
+    "expected_answer": "Hạng tốt nghiệp bị giảm một mức nếu khối lượng học phần phải học lại vượt quá 5% tổng số tín chỉ của chương trình hoặc sinh viên từng bị kỷ luật từ mức cảnh cáo trở lên.",
+    "expected_context": "Nguồn: quy chế HCMUE, Điều 15 khoản 3. Hai trường hợp là học lại quá 5% số tín chỉ toàn chương trình hoặc bị kỷ luật từ cảnh cáo trở lên."
+  },
+  {
+    "question": "Theo quy chế Đại học Nha Trang, sinh viên học hai chương trình phải làm gì nếu điểm trung bình học kỳ của chương trình thứ nhất dưới 5,50?",
+    "expected_answer": "Sinh viên phải dừng học chương trình thứ hai ở học kỳ tiếp theo và không được đăng ký học phần của chương trình thứ hai cho đến khi cải thiện kết quả chương trình thứ nhất.",
+    "expected_context": "Nguồn: article_01, Điều 27 khoản 2. Điểm trung bình học kỳ chương trình thứ nhất dưới 5,50 thì phải tạm dừng chương trình thứ hai."
+  },
+  {
+    "question": "Khối lượng học tập tối thiểu và tối đa mỗi học kỳ tại Đại học Văn Lang là bao nhiêu?",
+    "expected_answer": "Tối thiểu là 2/3 khối lượng trung bình theo kế hoạch chuẩn và không thấp hơn 9 tín chỉ; tối đa là 3/2 khối lượng trung bình và không vượt quá 19 tín chỉ, trừ trường hợp đặc biệt được xem xét.",
+    "expected_context": "Nguồn: article_05, Điều 16 khoản 3. Mức tối thiểu là 2/3 nhưng không dưới 9 tín chỉ; mức tối đa là 3/2 nhưng không quá 19 tín chỉ."
+  },
+  {
+    "question": "Đồ án hoặc khóa luận tốt nghiệp tại Đại học Văn Lang có khối lượng bao nhiêu tín chỉ?",
+    "expected_answer": "Đồ án hoặc khóa luận tốt nghiệp có khối lượng tối thiểu 6 tín chỉ và tối đa 14 tín chỉ.",
+    "expected_context": "Nguồn: article_05, Điều 20 khoản 2. Đồ án và khóa luận tốt nghiệp được thiết kế với khối lượng từ 6 đến 14 tín chỉ."
+  }
+]
