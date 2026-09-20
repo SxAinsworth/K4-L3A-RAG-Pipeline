@@ -5,7 +5,7 @@
     "evaluator_model": "gemini-3.5-flash-lite",
     "generator_model": "gemini-3.1-flash-lite",
     "embedding_model": "keepitreal/vietnamese-sbert",
-    "corpus_commit": "6a2a2d4771d0f104a629a4e45188bcf7b23d5dee",
+    "corpus_commit": "6275777493f2a6c7f04f23f00ec47373496420d0",
     "golden_dataset_size": 15,
     "top_k": 5,
     "candidate_k_for_rrf": 10,

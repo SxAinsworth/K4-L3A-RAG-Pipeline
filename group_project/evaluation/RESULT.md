@@ -9,7 +9,7 @@
 | Evaluator model                    | `gemini-3.5-flash-lite`, temperature 0 |
 | Generator model                    | `gemini-3.1-flash-lite`, temperature 0.3, top-p 0.9 |
 | Embedding model                    | `keepitreal/vietnamese-sbert`, 768 dimensions |
-| Corpus version/commit              | Git `6a2a2d4771d0f104a629a4e45188bcf7b23d5dee`; 8 documents / 461 chunks |
+| Corpus version/commit              | Git `6275777493f2a6c7f04f23f00ec47373496420d0`; 8 documents / 461 chunks |
 | Golden dataset size                | 15 cases |
 | `top_k`                            | 5 final results for both configs |
 | Fallback threshold and calibration | 0.45; in-domain 0.684271, out-of-domain 0.278075 |
