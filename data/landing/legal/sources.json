@@ -1,0 +1,35 @@
+[
+  {
+    "id": "hust-scholarship-regulation-2018",
+    "filename": "hust_scholarship_regulation_2018.pdf",
+    "title": "Quy định xét cấp học bổng cho sinh viên Đại học Bách khoa Hà Nội",
+    "source": "Đại học Bách khoa Hà Nội",
+    "url": "https://hust.edu.vn/uploads/sys/sinh-vien/2019/03/20190301-dhbk-ha-noi-hoc-bong.375663.15135.pdf",
+    "retrieved_at": "2026-09-20T15:18:46+07:00",
+    "content_type": "application/pdf",
+    "size_bytes": 148303,
+    "sha256": "fa2744659d00381452b77d3034fc6c588d98e6897457ad2b1820553bf8883cdc"
+  },
+  {
+    "id": "hust-phd-scholarship-regulation-2026",
+    "filename": "hust_phd_scholarship_regulation_2026.pdf",
+    "title": "Quy định học bổng đối với nghiên cứu sinh tại Đại học Bách khoa Hà Nội",
+    "source": "Đại học Bách khoa Hà Nội",
+    "url": "https://sdh.hust.edu.vn/Upload/19/Files/Quyche/2026/Quyet_dinh_hoc_bong_NCS.pdf",
+    "retrieved_at": "2026-09-20T15:18:46+07:00",
+    "content_type": "application/pdf",
+    "size_bytes": 868120,
+    "sha256": "88473f7159ebfc4d323399480084d56cc0531d4cda478c6bc685a83b47820d52"
+  },
+  {
+    "id": "hunre-scholarship-and-student-aid-regulation-2025",
+    "filename": "hunre_scholarship_and_student_aid_regulation_2025.pdf",
+    "title": "Quy định học bổng khuyến khích học tập, trợ cấp xã hội và hỗ trợ chi phí học tập",
+    "source": "Trường Đại học Tài nguyên và Môi trường Hà Nội",
+    "url": "https://hunre.edu.vn/download/news/2025/07/04/142718_1872--%3Dpl__30062025103244_signed.pdf",
+    "retrieved_at": "2026-09-20T15:30:37+07:00",
+    "content_type": "application/pdf",
+    "size_bytes": 1627035,
+    "sha256": "e4ed99969e63677f123d1e98688aaedd3ccfe92f44565622ee617e7585cf1553"
+  }
+]

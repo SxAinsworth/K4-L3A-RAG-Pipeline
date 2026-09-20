@@ -1,0 +1,77 @@
+[
+	{
+		"question": "Quy định HUNRE 2025 áp dụng cho nhóm sinh viên nào?",
+		"expected_answer": "Quy định áp dụng cho sinh viên đại học chính quy văn bằng thứ nhất và xét theo kế hoạch học tập chuẩn; không xét sinh viên đang bảo lưu tại thời điểm xét.",
+		"expected_context": "hunre-scholarship-and-student-aid-regulation-2025: Điều 1, phạm vi điều chỉnh và đối tượng áp dụng."
+	},
+	{
+		"question": "Một điều kiện xét học bổng khuyến khích học tập của HUNRE là gì?",
+		"expected_answer": "Sinh viên không được nợ học phí tại thời điểm xét và phải có kết quả học tập, rèn luyện từ loại khá trở lên.",
+		"expected_context": "hunre-scholarship-and-student-aid-regulation-2025: Điều 4, điều kiện xét HBKKHT."
+	},
+	{
+		"question": "HUNRE xét học bổng theo học kỳ phụ không?",
+		"expected_answer": "Không. Quy định nêu việc xét và cấp theo học kỳ, tín chỉ, số tháng hoặc đối tượng hưởng, nhưng không xét học kỳ phụ.",
+		"expected_context": "hunre-scholarship-and-student-aid-regulation-2025: Điều 3, nguyên tắc xét."
+	},
+	{
+		"question": "Quy định học bổng nghiên cứu sinh HUST 2026 quy định những nội dung nào?",
+		"expected_answer": "Quy định bao gồm đối tượng, nguyên tắc xét và cấp, điều kiện hưởng và duy trì, mức học bổng, thời gian hưởng, chi trả, chấm dứt, thu hồi và điều khoản chuyển tiếp.",
+		"expected_context": "hust-phd-scholarship-regulation-2026: Điều 1, phạm vi điều chỉnh và đối tượng áp dụng."
+	},
+	{
+		"question": "Quyết định học bổng nghiên cứu sinh HUST 2026 có hiệu lực từ khi nào?",
+		"expected_answer": "Quyết định có hiệu lực kể từ ngày ký.",
+		"expected_context": "hust-phd-scholarship-regulation-2026: Quyết định, Điều 2."
+	},
+	{
+		"question": "Quy định học bổng HUST 2018 áp dụng cho những đối tượng nào?",
+		"expected_answer": "Quy định áp dụng cho sinh viên đại học chính quy, học viên cao học theo định hướng nghiên cứu và nghiên cứu sinh của Trường Đại học Bách khoa Hà Nội.",
+		"expected_context": "hust-scholarship-regulation-2018: Điều 1, phạm vi áp dụng."
+	},
+	{
+		"question": "HUST 2018 có những loại học bổng nào?",
+		"expected_answer": "Các loại gồm học bổng tài năng, học bổng hỗ trợ học tập, học bổng nghiên cứu và học bổng tài trợ.",
+		"expected_context": "hust-scholarship-regulation-2018: Điều 2, chính sách và loại học bổng."
+	},
+	{
+		"question": "Học bổng hỗ trợ học tập HUST bán phần bằng bao nhiêu so với toàn phần?",
+		"expected_answer": "Học bổng bán phần bằng 50% học bổng toàn phần.",
+		"expected_context": "hust-scholarship-regulation-2018: Điều 2, học bổng hỗ trợ học tập."
+	},
+	{
+		"question": "Học bổng Tiếp sức đến trường của OU hỗ trợ đối tượng nào?",
+		"expected_answer": "Học bổng hỗ trợ sinh viên có hoàn cảnh gia đình khó khăn không có khả năng đóng học phí tại một thời điểm nhất định để không bị gián đoạn việc học.",
+		"expected_context": "ou-back-to-school-scholarship: Đối tượng và phạm vi áp dụng."
+	},
+	{
+		"question": "Tân sinh viên OU cần điểm trung bình lớp 12 tối thiểu bao nhiêu để xét học bổng Tiếp sức đến trường?",
+		"expected_answer": "Điểm trung bình học tập lớp 12 phải đạt từ 6.0 trở lên.",
+		"expected_context": "ou-back-to-school-scholarship: Điều 2, điều kiện và tiêu chuẩn cho tân sinh viên."
+	},
+	{
+		"question": "Mức học bổng Tiếp sức đến trường OU cho sinh viên khó khăn đột xuất là bao nhiêu?",
+		"expected_answer": "Mức học bổng là 3.000.000 đồng cho mỗi sinh viên trong mỗi đợt xét cấp.",
+		"expected_context": "ou-back-to-school-scholarship: Điều 7, mức học bổng."
+	},
+	{
+		"question": "Sinh viên OU cần nộp hồ sơ học bổng Tiếp sức đến trường ở đâu?",
+		"expected_answer": "Sinh viên nộp hồ sơ và giấy tờ liên quan tại Phòng Công tác sinh viên và Truyền thông.",
+		"expected_context": "ou-back-to-school-scholarship: Điều 5 và Điều 9, quy trình xét cấp."
+	},
+	{
+		"question": "Sinh viên OU đã nhận học bổng Tiếp sức đến trường có được nhận thêm học bổng khác không?",
+		"expected_answer": "Có thể, nếu đủ tiêu chuẩn của loại học bổng khác; tuy nhiên không áp dụng khi đã nhận học bổng Vượt khó học tập hoặc khoản hỗ trợ hoàn cảnh khó khăn đột xuất trong cùng học kỳ.",
+		"expected_context": "ou-back-to-school-scholarship: Đối tượng và phạm vi áp dụng."
+	},
+	{
+		"question": "Học bổng OU cho hoàn cảnh khó khăn đột xuất yêu cầu điểm rèn luyện tối thiểu bao nhiêu?",
+		"expected_answer": "Điểm trung bình rèn luyện tích lũy phải đạt từ 65 trở lên và sinh viên không bị bất kỳ hình thức kỷ luật nào.",
+		"expected_context": "ou-back-to-school-scholarship: Điều 6, điều kiện và tiêu chuẩn."
+	},
+	{
+		"question": "Quy trình xét học bổng Tiếp sức đến trường OU gồm bước chính nào?",
+		"expected_answer": "Quy trình gồm nộp hồ sơ và giấy tờ liên quan, sau đó xét chọn dựa trên tiêu chuẩn, điều kiện và đề nghị của các khoa để trình Hội đồng xem xét.",
+		"expected_context": "ou-back-to-school-scholarship: Điều 5 và Điều 9, quy trình xét cấp học bổng."
+	}
+]

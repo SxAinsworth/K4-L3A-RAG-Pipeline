@@ -37,6 +37,10 @@ htmlcov/
 
 # Temp PDF conversion cache
 data/_tmp_pdf/
+# Downloaded sources rejected during text-quality validation
+data/rejected/
+data/pageindex_uploads/
+data/pageindex_document_ids.json
 
 # Temp / cache
 .pytest_cache/

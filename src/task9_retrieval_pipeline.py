@@ -11,13 +11,20 @@ Luồng xử lý:
 Không so sánh threshold với RRF score vì hai thang đo khác nhau.
 """
 
+import os
+
+from dotenv import load_dotenv
+
 from .task5_semantic_search import semantic_search
 from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
 
 
-SCORE_THRESHOLD = 0.3
+load_dotenv()
+
+
+SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD") or "0.3")
 DEFAULT_TOP_K = 5
 
 
@@ -28,25 +35,37 @@ def retrieve(
     use_reranking: bool = True,
 ) -> list[dict]:
     """Trả về hybrid hoặc pageindex SearchResult."""
-    # TODO: Implement full retrieval pipeline.
-    #
-    # dense = semantic_search(query, top_k=top_k * 2)
-    # sparse = lexical_search(query, top_k=top_k * 2)
-    # hybrid = (
-    #     rerank_rrf([dense, sparse], top_k=top_k)
-    #     if use_reranking else dense[:top_k]
-    # )
-    #
-    # best_dense_score = dense[0]["score"] if dense else 0.0
-    # if best_dense_score < score_threshold:
-    #     try:
-    #         fallback = pageindex_search(query, top_k=top_k)
-    #         if fallback:
-    #             return fallback
-    #     except Exception:
-    #         pass
-    # return hybrid[:top_k]
-    raise NotImplementedError("Implement retrieve")
+    if not isinstance(query, str) or not query.strip():
+        raise ValueError("query must be a non-empty string")
+    if not isinstance(top_k, int) or isinstance(top_k, bool) or top_k < 0:
+        raise ValueError("top_k must be a non-negative integer")
+    if not isinstance(score_threshold, (int, float)) or isinstance(score_threshold, bool):
+        raise ValueError("score_threshold must be numeric")
+    if not isinstance(use_reranking, bool):
+        raise TypeError("use_reranking must be a boolean")
+    if top_k == 0:
+        return []
+
+    candidate_count = top_k * 2
+    dense = semantic_search(query, top_k=candidate_count)
+    sparse = lexical_search(query, top_k=candidate_count)
+    hybrid = (
+        rerank_rrf([dense, sparse], top_k=top_k)
+        if use_reranking
+        else [dict(item) for item in dense[:top_k]]
+    )
+
+    best_dense_score = float(dense[0]["score"]) if dense else 0.0
+    if best_dense_score < float(score_threshold):
+        try:
+            fallback = pageindex_search(query, top_k=top_k)
+            if fallback:
+                return fallback[:top_k]
+        except Exception:
+            # PageIndex is an optional external fallback; its outage must not
+            # discard the independently available hybrid retrieval evidence.
+            pass
+    return hybrid[:top_k]
 
 
 if __name__ == "__main__":
