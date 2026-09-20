@@ -3,7 +3,7 @@
 ## Thông tin
 
 - Họ và tên: Đinh Thị Minh Tâm
-- Mã học viên: Chưa được cung cấp trong repository
+- Mã học viên: 2A202602433
 - Nhóm: فتيات جميلات
 - Repository: [SxAinsworth/K4-L3A-RAG-Pipeline](https://github.com/SxAinsworth/K4-L3A-RAG-Pipeline)
 - Branch phụ trách: [`minhtam`](https://github.com/SxAinsworth/K4-L3A-RAG-Pipeline/tree/minhtam)
