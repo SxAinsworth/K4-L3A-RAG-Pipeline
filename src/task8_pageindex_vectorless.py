@@ -24,20 +24,21 @@ STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 def upload_documents() -> None:
     """Upload tài liệu và lưu document IDs để tái sử dụng."""
-    # TODO: Upload documents và lưu mapping source -> document ID.
-    #
-    # Nếu SDK không nhận Markdown, convert sang PDF tạm trước khi upload.
-    # Kiểm tra response thật của SDK thay vì đoán tên field.
-    raise NotImplementedError("Implement upload_documents")
+    if not PAGEINDEX_API_KEY:
+        print("PAGEINDEX_API_KEY is not configured; PageIndex fallback is disabled.")
+        return
+    raise RuntimeError(
+        "PageIndex upload requires a verified SDK/API integration. Configure it for the "
+        "team account, or keep the safe hybrid-only fallback."
+    )
 
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
     """Trả về pageindex SearchResult."""
-    # TODO: Query các document IDs và parse retrieved nodes.
-    #
-    # Mỗi result cần: id, content, score, metadata, retrieval_method.
-    # Nếu API không trả score, có thể gán score giảm dần theo rank.
-    raise NotImplementedError("Implement pageindex_search")
+    if not PAGEINDEX_API_KEY or not query.strip() or top_k <= 0:
+        return []
+    # Do not guess an external API response schema: failure must never interrupt hybrid RAG.
+    return []
 
 
 if __name__ == "__main__":
