@@ -12,10 +12,10 @@ Giới hạn khuyến nghị: 1 trang, không chép lại README hoặc mô tả
 
 ## Thông tin
 
-- Họ và tên:
+- Họ và tên: Đinh Thị Minh Tâm
 - Mã học viên:
-- Nhóm:
-- Repository/branch:
+- Nhóm: فتيات جميلات
+- Repository/branch: Minhtam
 
 ## Phần việc đã thực hiện
 
